@@ -25,13 +25,34 @@ class contour {
         }
         
         System.out.println("Paint contour? (Y/N)");
-        String z = sc.nextLine();
-        z = z.toLowerCase;
-        if (z="y") {
+        char z = sc.next().charAt(0);
+        z = Character.toUpperCase(z);
+        
+        int a = array.length;
+        
+        if (z=='Y') {
+            for (int i=0; i<array[0].length; i++) {
+                array[0][i] = "*";
+            }
             
+            for (int j=1; j<a-1; j++) {
+                array[j][0]="*";
+                array[j][array[j].length-1]="*";
+            }
+
+            for (int k=0; k<array[0].length; k++) {
+                array[a-1][k] = "*";
+            }
+
+            for (int i=0; i<x; i++) {
+                for (int j=0; j<x; j++) {
+                    System.out.print(array[i][j]);
+                }
+                System.out.println("");
+            }
         }
         else {
-            System.out.println("Goodbye!")
+            System.out.println("Goodbye!");
         }
     }
         
