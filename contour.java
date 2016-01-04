@@ -9,9 +9,30 @@ class contour {
         int x = sc.nextInt();
         
         String[][] array = new String[x][x];
-        Arrays.fill(array, "-");
+
+        for (int i=0; i<x; i++) {
+            for (int j=0; j<x; j++) {
+                array[i][j] = "-";
+            }
+        }
         
-        System.out.println(Arrays.toString(array));
+        for (int i=0; i<x; i++) {
+            for (int j=0; j<x; j++) {
+                array[i][j] = "-";
+                System.out.print(array[i][j]);
+            }
+            System.out.println("");
+        }
         
+        System.out.println("Paint contour? (Y/N)");
+        String z = sc.nextLine();
+        z = z.toLowerCase;
+        if (z="y") {
+            
+        }
+        else {
+            System.out.println("Goodbye!")
+        }
     }
+        
 }
