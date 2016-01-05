@@ -24,7 +24,7 @@ class x {
             System.out.println("");
         }
         
-        System.out.println("Paint contour? (Y/N)");
+        System.out.println("Paint X? (Y/N)");
         char z = sc.next().charAt(0);
         z = Character.toUpperCase(z);
         
@@ -37,6 +37,15 @@ class x {
                 array[i][j] = "*";
                 i++;
                 j++;
+            }
+            
+            i=0;
+            j=x-1;
+            
+            while (i<x && j>=0) {
+                array[i][j] = "*";
+                i++;
+                j--;
             }
 
             for (i=0; i<x; i++) {
